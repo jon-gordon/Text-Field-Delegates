@@ -13,6 +13,8 @@
 		FC5862FA1B09357F0031F93A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5862F91B09357F0031F93A /* Images.xcassets */; };
 		FC5862FD1B09357F0031F93A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC5862FB1B09357F0031F93A /* LaunchScreen.xib */; };
 		FC5863091B09357F0031F93A /* Text_Field_DelegatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5863081B09357F0031F93A /* Text_Field_DelegatesTests.swift */; };
+		FC5863141B093B1E0031F93A /* EmojiTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5863131B093B1E0031F93A /* EmojiTextFieldDelegate.swift */; };
+		FC5863161B093B360031F93A /* ColouriserTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5863151B093B360031F93A /* ColouriserTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		FC5863021B09357F0031F93A /* Text Field DelegatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Text Field DelegatesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5863071B09357F0031F93A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC5863081B09357F0031F93A /* Text_Field_DelegatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text_Field_DelegatesTests.swift; sourceTree = "<group>"; };
+		FC5863131B093B1E0031F93A /* EmojiTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTextFieldDelegate.swift; sourceTree = "<group>"; };
+		FC5863151B093B360031F93A /* ColouriserTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColouriserTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		FC5862EF1B09357F0031F93A /* Text Field Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				FC5863121B093B000031F93A /* Delegates */,
 				FC5862F21B09357F0031F93A /* AppDelegate.swift */,
 				FC5862F41B09357F0031F93A /* ViewController.swift */,
 				FC5862F61B09357F0031F93A /* Main.storyboard */,
@@ -110,6 +115,15 @@
 				FC5863071B09357F0031F93A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC5863121B093B000031F93A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				FC5863131B093B1E0031F93A /* EmojiTextFieldDelegate.swift */,
+				FC5863151B093B360031F93A /* ColouriserTextFieldDelegate.swift */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5862F51B09357F0031F93A /* ViewController.swift in Sources */,
+				FC5863161B093B360031F93A /* ColouriserTextFieldDelegate.swift in Sources */,
 				FC5862F31B09357F0031F93A /* AppDelegate.swift in Sources */,
+				FC5863141B093B1E0031F93A /* EmojiTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

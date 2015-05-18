@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     // Outlets
     @IBOutlet weak var textField1: UITextField!
@@ -17,9 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var characterCountLabel: UILabel!
 
     // Delegate objects
+    let emojiDelegate = EmojiTextFieldDelegate()
+    let colouriserDelegate = ColouriserTextFieldDelegate()
 
     // Lifecycle methods
     override func viewDidLoad() {
+
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
@@ -27,8 +30,26 @@ class ViewController: UIViewController {
         self.characterCountLabel.hidden = false
 
         // Set the delegates
+        self.textField1.delegate = emojiDelegate
+        self.textField2.delegate = colouriserDelegate
+        self.textField3.delegate = self
     }
 
     // Text Field Delegate methods
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        // Figure out what the new text will be, if we return true
+        var newText: NSString = textField.text
+        newText = newText.stringByReplacingCharactersInRange(range, withString: string)
+
+        // Hide the label if the newText will be an empty string
+        self.characterCountLabel.hidden = (newText.length == 0);
+
+        // Write the length of newText into the label
+        self.characterCountLabel.text = String(newText.length)
+
+        // Returning true gives the text field permission to change its text
+        return true
+    }
 }
 
